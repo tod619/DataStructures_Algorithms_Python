@@ -43,3 +43,9 @@ list2 = ["list2", 23, 45, 9.4]
 result = list1 + list2
 print(result)
 # End: Lesson Advanced Operations
+
+# Start: Lesson List Compehension
+number = [1, -5, 10, 100, 67, 54, 20, 35]
+new_number_list = [num for num in number if num % 2 == 0 or num == -5]
+print(new_number_list)
+# End: Lesson List Compehension
