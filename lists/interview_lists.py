@@ -39,3 +39,18 @@ print(f"Is racecar a palindrome?: {is_palindrome_python('racecar')}")
 print(f"Is horse a palindrome?: {is_palindrome_python('horse')}")
 print("***** End: Palindrome Test *****\n")
 
+
+# Reverse an integer value
+def reverse_integer(n):
+    # your implementation goes here
+    result = str(n)
+    
+    result = result[::-1]
+    
+    result = int(result)
+    
+    return result
+
+print("***** Start: Reverse Int *****")
+print(f"1245 reversed is: {reverse_integer(1245)}")
+print("***** End: Reverse Int *****\n")
