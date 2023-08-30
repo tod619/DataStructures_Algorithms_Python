@@ -25,3 +25,17 @@ print("***** Start: Reverse List Test *****")
 print(f"Original list: {my_list}")
 print(f"Reversed List: {reverse(my_list)}")
 print("***** End: Reverse List Test *****\n")
+
+def is_palindrome_python(s:str) -> bool:
+
+    if s == s[::-1]:
+        return True
+    
+    return False
+
+
+print("***** Start: Palindrome Test *****")
+print(f"Is racecar a palindrome?: {is_palindrome_python('racecar')}")
+print(f"Is horse a palindrome?: {is_palindrome_python('horse')}")
+print("***** End: Palindrome Test *****\n")
+
