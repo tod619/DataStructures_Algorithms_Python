@@ -41,7 +41,7 @@ print("***** End: Palindrome Test *****\n")
 
 
 # Reverse an integer value
-def reverse_integer(n):
+def reverse_integer(n:int) -> int:
     # your implementation goes here
     result = str(n)
     
@@ -54,3 +54,17 @@ def reverse_integer(n):
 print("***** Start: Reverse Int *****")
 print(f"1245 reversed is: {reverse_integer(1245)}")
 print("***** End: Reverse Int *****\n")
+
+# Check if 2 strings are anagrams of each other
+def is_anagram(str1:str, str2:str ) -> bool:
+    if len(str1) != len(str2):
+        return False
+    
+    str1 = sorted(str1)
+    str2 = sorted(str2)
+
+    for i in range(len(str1)):
+        if str1[i] != str2[i]:
+            return False
+        
+    return True
