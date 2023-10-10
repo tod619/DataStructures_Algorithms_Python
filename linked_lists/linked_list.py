@@ -1,12 +1,18 @@
 # Linked List Implementation
 # 10/10/2023
 
+from typing import Any
+
+
 class Node:
     def __init__(self, data):
         self.data = data
         self.next_node = None
 
-class Linked_List:
+    def __repr__(self):
+        return self.data
+
+class LinkedList:
     def __init__(self):
         self.head = None
         self.num_of_nodes = 0
@@ -38,10 +44,25 @@ class Linked_List:
             while actual_node.next_node is not None:
                 actual_node = actual_node.next_node
 
-            actual_node.next_node = new_node
-
-        
+            actual_node.next_node = new_node        
 
     # Return the size of the list 0(1) constant time
     def size_of_list(self):
-        return self.num_of_nodes  
+        return self.num_of_nodes
+
+    # vist every node in the list 0(N)
+    def traverse(self):
+        actual_node = self.head
+
+        while actual_node is not None:
+            print(actual_node.data)
+            actual_node = actual_node.next_node
+
+
+if __name__ == '__main__':
+    linked_list = LinkedList()
+    linked_list.insert_start(10)
+    linked_list.insert_start(15)
+    linked_list.insert_start(25)
+
+    linked_list.traverse()
