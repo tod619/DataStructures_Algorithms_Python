@@ -45,17 +45,17 @@ class DoubleLinkedList:
             actual_node = actual_node.previous
 
 if __name__ == "__main__":
-    list = DoubleLinkedList()
+    my_doulde_linked_list = DoubleLinkedList()
 
-    list.insert(10)
-    list.insert(15)
-    list.insert(20)
-    list.insert(25)
-    list.insert(30)
+    my_doulde_linked_list.insert(10)
+    my_doulde_linked_list.insert(15)
+    my_doulde_linked_list.insert(20)
+    my_doulde_linked_list.insert(25)
+    my_doulde_linked_list.insert(30)
 
     print("Traverse Forward Through The List\n")
-    list.traverse_forward()
+    my_doulde_linked_list.traverse_forward()
     print("\n************************\n")
     print("Traverse The Linked List In Reverse")
-    list.traverse_reverse()
+    my_doulde_linked_list.traverse_reverse()
 
