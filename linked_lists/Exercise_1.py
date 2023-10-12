@@ -13,7 +13,15 @@ class LinkedList:
     # O(N) linear running time complexity
     def get_middle_node(self):
         # your implementation goes here !!!
-        pass
+        fast_pointer = self.head
+        slow_pointer = self.head
+
+        while fast_pointer.next_node and fast_pointer.next_node.next_node:
+            fast_pointer = fast_pointer.next_node.next_node
+            slow_pointer = slow_pointer.next_node
+
+        return slow_pointer
+
 
     def insert(self, data):
 
@@ -40,3 +48,14 @@ class Node:
     def __init__(self, data):
         self.data = data
         self.next_node = None
+
+
+linkked_list = LinkedList()
+linkked_list.insert(10)
+linkked_list.insert(50)
+linkked_list.insert(100)
+linkked_list.insert(160)
+linkked_list.insert(210)
+linkked_list.insert(270)
+
+print(linkked_list.get_middle_node().data)
