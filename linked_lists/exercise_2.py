@@ -17,7 +17,17 @@ class LinkedList:
     # O(N) linear running time complexity
     def reverse(self):
         # your algorithm goes here !!!
-        pass
+        current_node = self.head
+        previous_node = None
+        next_node = None
+
+        while current_node:
+            next_node = current_node.next_node
+            current_node.next_node = previous_node
+            previous_node = current_node
+            current_node = next_node
+
+        self.head = previous_node
 
     def insert(self, data):
 
