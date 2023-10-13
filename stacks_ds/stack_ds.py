@@ -15,4 +15,10 @@ class Stack:
     def pop(self):
         data = self.stack[-1]
         del self.stack[-1]
-        return data 
+        return data
+
+    # Create peek function that returns the last item but without removing it Big O(1)
+    def peek(self):
+        return self.stack[-1] 
+    
+     
