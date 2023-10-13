@@ -39,6 +39,8 @@ my_stack.push(25)
 my_stack.push(30)
 my_stack.push(55)
 
+print(f"The last item pushed onto the stack and the first one to pop off is {my_stack.peek()}")
+
 print(f"The size of my stack is: {my_stack.stack_size()}")
 while my_stack.is_empty() != True:
     print(my_stack.pop())
