@@ -21,4 +21,8 @@ class Stack:
     def peek(self):
         return self.stack[-1] 
     
-     
+    # Create is empty function that returns true/false if the stack has an item or not
+    def is_empty(self):
+        return self.stack == []
+
+
