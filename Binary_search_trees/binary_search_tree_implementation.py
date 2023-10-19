@@ -36,3 +36,25 @@ class BinarySearchtree:
                 self.insert_node(data, node.right_node)
             else:
                 node.right_node = Node(data, node)
+
+    def get_min(self):
+        if self.node:
+            return self.get_min_value(self.root)
+
+    def get_min_value(self, node):
+        if node.left_node:
+            self.get_min_value(node.left_node)
+
+        return node.data
+    
+    def get_max(self):
+        if self.node:
+            return self.get_max_value(self.root)
+
+    def get_max_value(self, node):
+        if node.right_node:
+            self.get_min_value(node.right_node)
+
+        return node.data
+        
+        
