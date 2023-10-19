@@ -70,6 +70,18 @@ class BinarySearchtree:
         if node.right_node:
             self.traverse_in_order(node.right_node)
 
-        print(node.data)
         
-        
+
+
+bst = BinarySearchtree()
+
+bst.insert(10)
+bst.insert(5)
+bst.insert(8)
+bst.insert(12)
+bst.insert(-5)
+
+bst.traverse()
+
+print(f"\nThe Max Node Item: {bst.get_max()}")
+print(f"\nThe Min Node Item: {bst.get_min()}")
