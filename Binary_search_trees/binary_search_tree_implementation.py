@@ -43,7 +43,7 @@ class BinarySearchtree:
 
     def get_min_value(self, node):
         if node.left_node:
-            self.get_min_value(node.left_node)
+            return self.get_min_value(node.left_node)
 
         return node.data
     
@@ -53,7 +53,7 @@ class BinarySearchtree:
 
     def get_max_value(self, node):
         if node.right_node:
-            self.get_min_value(node.right_node)
+            return self.get_min_value(node.right_node)
 
         return node.data
     
