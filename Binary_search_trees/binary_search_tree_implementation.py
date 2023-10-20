@@ -15,7 +15,6 @@ class BinarySearchtree:
     def __init__(self):
         self.root = None
 
-
     def insert(self, data):
         if self.root is None:
             self.root = Node(data)
@@ -46,7 +45,7 @@ class BinarySearchtree:
             return self.get_min_value(node.left_node)
 
         return node.data
-    
+
     def get_max(self):
         if self.root:
             return self.get_max_value(self.root)
@@ -56,7 +55,7 @@ class BinarySearchtree:
             return self.get_min_value(node.right_node)
 
         return node.data
-    
+
     def traverse(self):
         if self.root:
             self.traverse_in_order(self.root)
@@ -64,13 +63,11 @@ class BinarySearchtree:
     def traverse_in_order(self, node):
         if node.left_node:
             self.traverse_in_order(node.left_node)
-        
+
         print(node.data)
 
         if node.right_node:
             self.traverse_in_order(node.right_node)
-
-        
 
 
 bst = BinarySearchtree()
